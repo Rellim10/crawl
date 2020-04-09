@@ -64,8 +64,8 @@ static const char *skill_titles[NUM_SKILLS][6] =
 {
   //  Skill name        levels 1-7       levels 8-14        levels 15-20       levels 21-26      level 27
     {"Fighting",       "Skirmisher",    "Fighter",         "Warrior",         "Slayer",         "Conqueror"},
-    {"Short Blades",   "Cutter",        "Slicer",          "Swashbuckler",    "Cutthroat",      "Politician"},
-    {"Long Blades",    "Slasher",       "Carver",          "Fencer",          "@Adj@ Blade",    "Swordmaster"},
+    {"chungus",        "chungus",       "chungus",         "chungus",         "chungus",        "chungus"},
+    {"Blades",         "Weeaboo",       "Slasher",         "Fencer",          "@Adj@ Blade",    "Swordmaster"},
     {"Axes",           "Chopper",       "Cleaver",         "Severer",         "Executioner",    "Axe Maniac"},
     {"Maces & Flails", "Cudgeler",      "Basher",          "Bludgeoner",      "Shatterer",      "Skullcrusher"},
     {"Polearms",       "Poker",         "Spear-Bearer",    "Impaler",         "Phalangite",     "@Adj@ Porcupine"},
@@ -1663,7 +1663,7 @@ string skill_title_by_rank(skill_type best_skill, uint8_t skill_rank,
 
             break;
 
-        case SK_SHORT_BLADES:
+        case SK_LONG_BLADES: //shortblades isn't used now
             if (species_is_elven(species) && skill_rank == 5)
             {
                 result = "Blademaster";
@@ -1950,10 +1950,10 @@ vector<skill_type> get_crosstrain_skills(skill_type sk)
 
     switch (sk)
     {
-    case SK_SHORT_BLADES:
-        return { SK_LONG_BLADES };
-    case SK_LONG_BLADES:
-        return { SK_SHORT_BLADES };
+    //case SK_SHORT_BLADES:
+    //    return { SK_LONG_BLADES };
+    //case SK_LONG_BLADES:
+    //    return { SK_SHORT_BLADES };
     case SK_AXES:
     case SK_STAVES:
         return { SK_POLEARMS, SK_MACES_FLAILS };

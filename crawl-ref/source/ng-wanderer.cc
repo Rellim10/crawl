@@ -39,8 +39,12 @@ static void _give_wanderer_weapon(skill_type wpn_skill, int plus)
         sub_type = WPN_SHORT_SWORD;
         break;
 
-    case SK_LONG_BLADES:
-        sub_type = WPN_FALCHION;
+    case SK_LONG_BLADES: //choose long or short blade randomly
+		if (coinflip())
+			sub_type = WPN_FALCHION;
+		else
+			sub_type = WPN_SHORT_SWORD;
+		//end if
         break;
 
     case SK_MACES_FLAILS:
@@ -183,7 +187,7 @@ static skill_type _wanderer_role_weapon_select(stat_type role)
     int str_size = ARRAYSZ(str_weapons);
 
     const skill_type dex_weapons[] =
-        { SK_SHORT_BLADES, SK_LONG_BLADES, SK_STAVES, SK_UNARMED_COMBAT,
+        { SK_LONG_BLADES, SK_STAVES, SK_UNARMED_COMBAT,
           SK_POLEARMS };
 
     int dex_size = ARRAYSZ(dex_weapons);
@@ -470,7 +474,7 @@ static void _wanderer_good_equipment(skill_type & skill)
 
     const skill_type combined_weapon_skills[] =
         { SK_AXES, SK_MACES_FLAILS, SK_BOWS,
-          SK_SHORT_BLADES, SK_LONG_BLADES, SK_STAVES, SK_UNARMED_COMBAT,
+          SK_LONG_BLADES, SK_STAVES, SK_UNARMED_COMBAT,
           SK_POLEARMS };
 
     int total_weapons = ARRAYSZ(combined_weapon_skills);
@@ -570,7 +574,7 @@ static void _wanderer_decent_equipment(skill_type & skill,
 {
     const skill_type combined_weapon_skills[] =
         { SK_AXES, SK_MACES_FLAILS, SK_BOWS,
-          SK_SHORT_BLADES, SK_LONG_BLADES, SK_STAVES, SK_UNARMED_COMBAT,
+          SK_LONG_BLADES, SK_STAVES, SK_UNARMED_COMBAT,
           SK_POLEARMS };
 
     int total_weapons = ARRAYSZ(combined_weapon_skills);

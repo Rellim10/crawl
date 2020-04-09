@@ -336,7 +336,7 @@ bool melee_attack::handle_phase_dodged()
         if (defender->is_player())
         {
             const bool using_lbl = defender->weapon()
-                && item_attack_skill(*defender->weapon()) == SK_LONG_BLADES;
+                && defender->weapon()->is_type(OBJ_WEAPONS, WPN_RAPIER);//item_attack_skill(*defender->weapon()) == SK_LONG_BLADES;
             const bool using_fencers
                 = player_equip_unrand(UNRAND_FENCERS);
             const int chance = using_lbl + using_fencers;
@@ -2327,7 +2327,11 @@ void melee_attack::player_stab_check()
  */
 bool melee_attack::player_good_stab()
 {
-    return wpn_skill == SK_SHORT_BLADES
+	//check specifically for daggers, shortswords, rapiers, and quickblades
+    return (wpn_skill == SK_LONG_BLADES && ( (weapon->sub_type == WPN_DAGGER)
+										   ||(weapon->sub_type == WPN_SHORT_SWORD)
+										   ||(weapon->sub_type == WPN_RAPIER)
+										   ||(weapon->sub_type == WPN_QUICK_BLADE) ))
            || you.get_mutation_level(MUT_PAWS)
            || player_equip_unrand(UNRAND_HOOD_ASSASSIN)
               && (!weapon || is_melee_weapon(*weapon));
