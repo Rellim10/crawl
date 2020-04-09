@@ -556,7 +556,9 @@ static int _acquirement_missile_subtype(bool /*divine*/, int & /*quantity*/,
     switch (skill)
     {
     case SK_SLINGS:    result = MI_SLING_BULLET; break;
-    case SK_BOWS:      result = MI_ARROW; break;
+	//gift can be arrows or bolts
+	//maybe change it later to make it always useful
+    case SK_BOWS:      result = ( coinflip() ? MI_ARROW : MI_BOLT ); break;
     case SK_CROSSBOWS: result = MI_BOLT; break;
 
     case SK_THROWING:

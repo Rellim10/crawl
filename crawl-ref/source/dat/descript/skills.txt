@@ -72,15 +72,15 @@ appropriate launcher and ammunition.
 Being skilled with Slings increases your effectiveness in Throwing, and vice
 versa.
 %%%%
-Bows
+Archery
 
-Being skilled with Bows will let you deal more damage when using the
-appropriate launcher and ammunition.
+Being skilled in Archery will let you deal more damage when using
+bows and crossbows with the appropriate ammunition.
 %%%%
-Crossbows
+chungus
 
-Being skilled with Crossbows will let you deal more damage when using the
-appropriate launcher and ammunition.
+This skill probably got merged with something else.
+You shouldn't be reading this.
 %%%%
 Throwing
 
