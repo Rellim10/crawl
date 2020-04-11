@@ -286,6 +286,7 @@ static const pop_entry pop_swamp[] =
   {  1,  5,  425, SEMI, MONS_SHAMBLING_MANGROVE },
   {  1,  7,  115, PEAK, MONS_BLINK_FROG },
   {  1,  7,   52, SEMI, MONS_VERY_UGLY_THING },
+  {  1,  4,  665, FLAT, MONS_SWAMP_OGRE },
   {  2,  4,  525, RISE, MONS_SPRIGGAN_DRUID },
   { 0,0,0,FLAT,MONS_0 }
 };
