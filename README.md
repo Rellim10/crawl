@@ -17,6 +17,10 @@ Work in progress, there's no release yet so this is just a list of things I've d
 
 I fixed ogres guys, now all they can do is smash shit with clubs. You're welcome.
 
+**Minotaur**
+
+Renamed to Minitaur because now they're spriggan sized. Turns out minotaurs are still good even when they can't wear gloves and triple swords, go figure (also the EV bonus lmao).
+
 ### New Species
 
 **Swamp Ogre**
