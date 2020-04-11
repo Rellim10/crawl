@@ -9,7 +9,31 @@ A fork of DCSS that aims to ruin the game in every way I can think of without ma
 
 ## Features
 
-work in progress
+Work in progress, there's no release yet so this is just a list of things I've done so far.
+
+### Modified Species
+
+**Ogre**
+
+I fixed ogres guys, now all they can do is smash shit with clubs. You're welcome.
+
+### New Species
+
+**Swamp Ogre**
+
+They're like vanilla crawl ogres except a little more exciting. They get rPois, rCorr, and the ability to fart out poison clouds. If all of that sounds like I just made naga v2.0 then you're probably right, but I did it for shrek.
+
+### New Enemies
+
+**Swamp Ogre** _(Incomplete)_
+
+They're like the playable species version. They spawn in swamp sometimes. That's about it.
+Eventually they'll do more than be slightly more annoying ogres, but I'm lazy and want to work on other things first.
+
+### Other Shit
+
++ Merged Short Blades and Long Blades into Blades. Stabby blades still stab better, only rapiers riposte.
++ Merged Bows and Crossbows into Archery. Having a skill for two whole weapons that nobody uses is fucking dumb (I'll probably change slings too at some point, and you probably won't like it).
 
 ## License and history information
 
