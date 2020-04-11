@@ -39,6 +39,10 @@ Breathe Poison Gas ability
 
 Breathes a blast of poison gas at a targeted creature.
 %%%%
+Rip Ass ability
+
+Fart on the targeted creature. Classy.
+%%%%
 Breathe Lightning ability
 
 Releases a great discharge of electricity, causing an uncontrollable lightning

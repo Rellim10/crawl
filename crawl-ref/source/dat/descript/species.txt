@@ -116,6 +116,12 @@ Spriggan
 Very small, very frail and very fast, Spriggans make highly competent stabbers
 and spellcasters.
 %%%%
+%%%%
+Swamp Ogre
+
+Ogres that have adapted to living in swamps. They're naturally resistant to
+poison and have extra layers of skin like onions. Also, they fart.
+%%%%
 Troll
 
 Trolls are monstrous creatures with powerful claws, always hungering for raw

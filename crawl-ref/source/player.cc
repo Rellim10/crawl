@@ -1483,6 +1483,10 @@ bool player::res_corr(bool calc_unid, bool items) const
 
     if (get_mutation_level(MUT_ACID_RESISTANCE))
         return true;
+	
+	//swamp ogres
+    if (get_mutation_level(MUT_ONION_SKIN) >= 3)
+        return true;
 
     if (get_form()->res_acid())
         return true;
@@ -5906,7 +5910,8 @@ vector<mutation_ac_changes> all_mutation_ac_changes = {
     ,mutation_ac_changes(MUT_TOUGH_SKIN,             mutation_activity_type::PARTIAL, ONE_TWO_THREE)
     ,mutation_ac_changes(MUT_SHAGGY_FUR,             mutation_activity_type::PARTIAL, ONE_TWO_THREE)
     ,mutation_ac_changes(MUT_PHYSICAL_VULNERABILITY, mutation_activity_type::PARTIAL, {-5,-10,-15})
-    // Scale mutations are more easily disabled (forms etc.). This appears to be for flavour reasons.
+    ,mutation_ac_changes(MUT_ONION_SKIN,             mutation_activity_type::PARTIAL, ONE_TWO_THREE)
+	// Scale mutations are more easily disabled (forms etc.). This appears to be for flavour reasons.
     // Preserved behaviour from before mutation ac was turned to data.
     ,mutation_ac_changes(MUT_IRIDESCENT_SCALES,      mutation_activity_type::FULL,    {2, 4, 6})
     ,mutation_ac_changes(MUT_RUGGED_BROWN_SCALES,    mutation_activity_type::FULL,    ONE_TWO_THREE)

@@ -220,8 +220,8 @@ enum mutation_type
 #endif
 	
 	//new mutations//
-	//MUT_ONION_SKIN
-	//MUT_SWAMP_FARTS
+	MUT_ONION_SKIN, //swamp ogre mutation
+	//MUT_SWAMP_FARTS, //swamp ogre mutation
 	/////////////////
 	
     NUM_MUTATIONS,

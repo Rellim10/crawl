@@ -1912,6 +1912,39 @@ static const mutation_def mut_data[] =
   {"You feel resistant to acid.", "",  ""},
   {"You feel less resistant to acid.", "", ""},
 },
+
+//New Mutations
+//////////////////////////////////////////////////
+
+//swamp ogre mutation
+{ MUT_ONION_SKIN, 0, 3, mutflag::good, true,
+  "onion skin",
+
+  {"Ogres have layers. Like onions. (AC +1)",
+   "Ogres have layers. Like onions. (AC +2)",
+   "Ogres have layers. Like onions. (AC +3, rCorr)"},
+
+  {"Your skin grows layers.",
+   "Your skin grows more layers.",
+   "Your skin grows more layers."},
+
+  {"Your skin sheds layers.",
+   "Your skin sheds layers.",
+   "Your skin sheds layers."},
+},
+
+//swamp ogre mutation
+//{ MUT_SWAMP_FARTS, 0, 1, mutflag::good, false,
+//  "swamp farts",
+//
+//  {"You can fart clouds of poison.", "", ""},
+//  {"You feel really gassy.", "", ""},
+//  {"Your bad gas subsides.", "", ""},
+//},
+
+//////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
 };
 
 static const mutation_category_def category_mut_data[] =

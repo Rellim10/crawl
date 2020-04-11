@@ -1052,7 +1052,11 @@ enum monster_type                      // menv[].type
     MONS_FOXFIRE,
     MONS_MAGGIE,
 #endif
-
+	
+	//new
+	MONS_SWAMP_OGRE,
+	//
+	
     NUM_MONSTERS,               // used for polymorph
 
     // MONS_NO_MONSTER can get put in savefiles, so it shouldn't change

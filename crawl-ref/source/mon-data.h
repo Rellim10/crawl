@@ -3827,6 +3827,21 @@ DUMMY(MONS_MERGED_SLIME_CREATURE, 'J', LIGHTGREEN, "merged slime creature",
     {TILEP_MONS_OGRE}, TILE_CORPSE_OGRE
 },
 
+//swamp ogres
+//TO-DO: add fart attack
+{
+    MONS_SWAMP_OGRE, 'O', GREEN, "swamp ogre",
+    M_WARM_BLOOD | M_SPEAKS,
+    MR_RES_POISON | MR_RES_ACID,
+    12, MONS_OGRE, MONS_OGRE, MH_NATURAL, 40,
+    { {AT_HIT, AF_PLAIN, 17}, AT_NO_ATK, AT_NO_ATK, AT_NO_ATK },
+    7, 400,
+    3, 6, MST_NO_SPELLS, CE_NOXIOUS, S_SHOUT,
+    I_HUMAN, HT_LAND, 10, DEFAULT_ENERGY,
+    MONUSE_STARTING_EQUIPMENT, SIZE_LARGE, MON_SHAPE_HUMANOID,
+    {TILEP_MONS_OGRE}, TILE_CORPSE_OGRE //change after adding tiles
+},
+
 // These guys get understated because the experience code can't see
 // that they wield two weapons... I'm raising their xp modifier. - bwr
 {
