@@ -654,6 +654,7 @@ int make_mons_weapon(monster_type type, int level, bool melee_only)
                 { WPN_GREAT_MACE,       1 },
         } } },
         { MONS_OGRE,                    { OGRE_WEAPONS } },
+		{ MONS_SWAMP_OGRE,              { OGRE_WEAPONS } },
         { MONS_EROLCHA,                 { OGRE_WEAPONS } },
         { MONS_ILSUIW, {
             { { WPN_TRIDENT,            1 } },

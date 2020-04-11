@@ -218,6 +218,12 @@ enum mutation_type
 #if TAG_MAJOR_VERSION == 34
     MUT_ACID_RESISTANCE,
 #endif
+	
+	//new mutations//
+	MUT_ONION_SKIN, //swamp ogre mutation
+	//MUT_SWAMP_FARTS, //swamp ogre mutation
+	/////////////////
+	
     NUM_MUTATIONS,
     CATEGORY_MUTATIONS,
     RANDOM_MUTATION = CATEGORY_MUTATIONS,

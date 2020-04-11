@@ -108,13 +108,19 @@ but almost no armour fits them.
 %%%%
 Ogre
 
-Large, strong, and extremely robust, Ogres are competent at all forms of melee.
-They are not merely brutes, as they are comfortable with spellcasting.
+Large, strong, and extremely robust, Ogres are only good at SMASHING SHIT WITH
+GIANT SPIKED CLUBS. Ogres the way they were always meant to be. Yea buddy.
 %%%%
 Spriggan
 
 Very small, very frail and very fast, Spriggans make highly competent stabbers
 and spellcasters.
+%%%%
+%%%%
+Swamp Ogre
+
+Ogres that have adapted to living in swamps. They're naturally resistant to
+poison and have extra layers of skin like onions. Also, they fart.
 %%%%
 Troll
 

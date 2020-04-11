@@ -2,59 +2,55 @@ enum: SP_OGRE
 monster: MONS_OGRE
 name: Ogre
 adjective: Ogreish
-difficulty: Intermediate
+difficulty: Simple
 difficulty_priority: 30
 aptitudes:
   xp: 0
-  hp: 3
+  hp: 4
   mp_mod: 0
   mr: 4
-  fighting: 3
-  short_blades: -1
-  long_blades: -1
-  maces_and_flails: -1
-  slings: -3
-  bows: -3
-  crossbows: -3
-  armour: -2
-  dodging: -1
-  stealth: -2
+  fighting: 5
+  short_blades: false
+  long_blades: false
+  axes: false
+  maces_and_flails: 5
+  polearms: false
+  staves: false
+  slings: false
+  bows: false
+  crossbows: false
+  throwing: -1
+  armour: -5
+  dodging: -4
+  stealth: -5
   shields: -1
-  unarmed_combat: -1
-  spellcasting: 1
-  conjurations: -1
-  hexes: -1
-  charms: -1
-  summoning: -1
-  necromancy: -1
-  translocations: -1
-  transmutations: -1
-  fire_magic: -1
-  ice_magic: -1
-  air_magic: -1
-  earth_magic: -1
-  poison_magic: -1
+  spellcasting: -5
+  conjurations: -5
+  hexes: -5
+  charms: -5
+  summoning: -5
+  necromancy: -5
+  translocations: -5
+  transmutations: -5
+  fire_magic: -5
+  ice_magic: -5
+  air_magic: -5
+  earth_magic: -5
+  poison_magic: -5
   invocations: 1
-  evocations: -2
+  evocations: -4
 size: large
-str: 11
-int: 9
+str: 16
+int: 4
 dex: 4
-levelup_stat_frequency: 3
+levelup_stat_frequency: 4
 levelup_stats:
   - str
 mutations:
   1:
     MUT_TOUGH_SKIN: 1
 recommended_jobs:
-  - JOB_HUNTER
   - JOB_BERSERKER
-  - JOB_ARCANE_MARKSMAN
-  - JOB_WIZARD
-  - JOB_FIRE_ELEMENTALIST
 recommended_weapons:
   - SK_MACES_FLAILS
-  - SK_POLEARMS
-  - SK_STAVES
-  - SK_AXES
 create_enum: false

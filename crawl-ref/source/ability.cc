@@ -658,6 +658,13 @@ static const ability_def Ability_List[] =
       0, 0, 0, 0, {fail_basis::invo}, abflag::starve_ok },
     { ABIL_CONVERT_TO_BEOGH, "Convert to Beogh",
       0, 0, 0, 0, {fail_basis::invo}, abflag::starve_ok },
+	  
+	//new abilities
+	////////////////////////////////////////////////////////
+	//swamp ogre fart ability
+	{ ABIL_SWAMP_FARTS, "Rip Ass",
+      0, 0, 75, 0, {fail_basis::xl, 20, 1}, abflag::breath },
+	////////////////////////////////////////////////////////
 };
 
 static const ability_def& get_ability_def(ability_type abil)
@@ -1575,6 +1582,7 @@ static bool _check_ability_possible(const ability_def& abil, bool quiet = false)
     case ABIL_BREATHE_POWER:
     case ABIL_BREATHE_STEAM:
     case ABIL_BREATHE_MEPHITIC:
+	case ABIL_SWAMP_FARTS: //swamp ogres
         if (you.duration[DUR_BREATH_WEAPON])
         {
             if (!quiet)
@@ -1782,6 +1790,9 @@ static int _calc_breath_ability_range(ability_type ability)
 
     switch (ability)
     {
+	case ABIL_SWAMP_FARTS: //swamp ogre fart
+		range = 1;
+		break;
     case ABIL_BREATHE_ACID:
         range = 3;
         break;
@@ -2025,6 +2036,7 @@ static spret _do_ability(const ability_def& abil, bool fail)
     case ABIL_BREATHE_FIRE:
     case ABIL_BREATHE_FROST:
     case ABIL_BREATHE_POISON:
+	case ABIL_SWAMP_FARTS: //swamp ogre
     case ABIL_BREATHE_POWER:
     case ABIL_BREATHE_STEAM:
     case ABIL_BREATHE_MEPHITIC:
@@ -2074,6 +2086,15 @@ static spret _do_ability(const ability_def& abil, bool fail)
         case ABIL_BREATHE_POISON:
             if (zapping(ZAP_BREATHE_POISON, you.experience_level, beam, true,
                         "You exhale a blast of poison gas.")
+                == spret::abort)
+            {
+                return spret::abort;
+            }
+            break;
+			
+        case ABIL_SWAMP_FARTS: //swamp ogre fart
+            if (zapping(ZAP_BREATHE_POISON, you.experience_level, beam, true,
+                        "You fart out a cloud of poison gas.")
                 == spret::abort)
             {
                 return spret::abort;
@@ -3477,9 +3498,13 @@ vector<talent> your_talents(bool check_confused, bool include_unusable)
     vector<talent> talents;
 
     // Species-based abilities.
+	
+	if (you.species == SP_SWAMP_OGRE)
+		_add_talent(talents, ABIL_SWAMP_FARTS, check_confused);
+	
     if (you.species == SP_DEEP_DWARF)
         _add_talent(talents, ABIL_HEAL_WOUNDS, check_confused);
-
+	
     if (you.species == SP_FORMICID
         && (form_keeps_mutations() || include_unusable))
     {
@@ -3487,7 +3512,7 @@ vector<talent> your_talents(bool check_confused, bool include_unusable)
         if (!crawl_state.game_is_sprint() || brdepth[you.where_are_you] > 1)
             _add_talent(talents, ABIL_SHAFT_SELF, check_confused);
     }
-
+	
     if (you.get_mutation_level(MUT_HOP))
         _add_talent(talents, ABIL_HOP, check_confused);
 

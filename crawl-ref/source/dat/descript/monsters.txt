@@ -1747,6 +1747,11 @@ ogre
 A large, ugly, and fat creature, distantly related to orcs and goblins. It is
 tremendously strong.
 %%%%
+swamp ogre
+
+An ogre that lives in a swamp. Their favorite activities include beating the
+absolute shit out of people like you, and farting on things.
+%%%%
 ogre mage
 
 A rare breed of ogre, skilled in the use of magic. It usually becomes a
