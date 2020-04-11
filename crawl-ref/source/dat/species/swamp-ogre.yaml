@@ -1,0 +1,66 @@
+enum: SP_SWAMP_OGRE
+monster: MONS_SWAMP_OGRE
+name: "Swamp Ogre"
+short_name: SO
+adjective: Ogreish
+difficulty: Intermediate
+difficulty_priority: 30
+aptitudes:
+  xp: 0
+  hp: 3
+  mp_mod: 0
+  mr: 4
+  fighting: 3
+  short_blades: false
+  long_blades: -1
+  maces_and_flails: -1
+  slings: -3
+  bows: -3
+  crossbows: false
+  throwing: 1
+  armour: -2
+  dodging: -1
+  stealth: -3
+  shields: -1
+  unarmed_combat: 1
+  conjurations: -1
+  hexes: -2
+  charms: -1
+  summoning: -2
+  necromancy: -1
+  translocations: -1
+  transmutations: -1
+  fire_magic: -1
+  ice_magic: -1
+  air_magic: -2
+  poison_magic: 1
+  evocations: -1
+size: large
+str: 11
+int: 9
+dex: 4
+levelup_stat_frequency: 3
+levelup_stats:
+  - str
+mutations:
+  1:
+    MUT_ONION_SKIN: 1
+    MUT_POISON_RESISTANCE: 1
+  6:
+    MUT_ONION_SKIN: 1
+  13:
+    MUT_ONION_SKIN: 1
+fake_mutations:
+  - long: You can fart clouds of poison.
+    short: swamp farts
+recommended_jobs:
+  - JOB_BERSERKER
+  - JOB_GLADIATOR
+  - JOB_EARTH_ELEMENTALIST
+  - JOB_VENOM_MAGE
+recommended_weapons:
+  - SK_AXES
+  - SK_MACES_FLAILS
+  - SK_POLEARMS
+  - SK_STAVES
+altar_action: fart in front of
