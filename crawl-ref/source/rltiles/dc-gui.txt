@@ -348,6 +348,14 @@ base/octopode1 SP_RECOMMENDED_OCTOPODE
 %compose base/vine_stalker_f
 %compose body/animal_skin
 %finish SP_RECOMMENDED_VINE_STALKER
+%start
+%compose base/swamp_ogre_m
+%compose body/animal_skin
+%compose hair/short_black
+%finish SP_RECOMMENDED_SWAMP_OGRE
+%start
+%compose base/harpy_f
+%finish SP_RECOMMENDED_HARPY
 %syn LAST_RECOMMENDED_SPECIES
 
 %sdir gui/backgrounds
@@ -379,4 +387,6 @@ enum:SP_RECOMMENDED_TENGU SP_TENGU
 enum:SP_RECOMMENDED_TROLL SP_TROLL
 enum:SP_RECOMMENDED_VAMPIRE SP_VAMPIRE
 enum:SP_RECOMMENDED_VINE_STALKER SP_VINE_STALKER
+enum:SP_RECOMMENDED_SWAMP_OGRE SP_SWAMP_OGRE
+enum:SP_RECOMMENDED_HARPY SP_HARPY
 %syn LAST_SPECIES

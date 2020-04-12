@@ -1391,6 +1391,20 @@ LIFE:     1
 INSCRIP:  rRot
 BOOL:     drain, evil, special, no_upgrade
 
+ENUM:    ASS_PLOW
+NAME:    giant spiked club "Ass Plow"
+APPEAR:  giant-ass fuckin' club
+OBJ:     OBJ_WEAPONS/WPN_GIANT_SPIKED_CLUB
+PLUS:    +27
+COLOUR:  ETC_BLOOD
+TILE:    urand_assplow
+TILE_EQ: giant_club_slant
+BRAND:   SPWPN_SPEED
+ANGRY:   100
+INT:     -12
+INSCRIP: plows ass
+BOOL:    unided, skip_ego, curse, special
+
 # This entry must always be last.
 ENUM:   DUMMY2
 NAME:   DUMMY UNRANDART 2

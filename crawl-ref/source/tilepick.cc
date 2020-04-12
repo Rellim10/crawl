@@ -3885,6 +3885,10 @@ static tileidx_t _tileidx_player_species_base(const species_type species)
             return TILEG_SP_BARACHI;
         case SP_GNOLL:
             return TILEG_SP_GNOLL;
+		case SP_SWAMP_OGRE:
+			return TILEG_SP_SWAMP_OGRE;
+		case SP_HARPY:
+			return TILEG_SP_HARPY;
         default:
             return TILEP_ERROR;
     }

@@ -23,6 +23,7 @@
 #include "areas.h"         // For silenced() and invalidate_agrid()
 #include "attack.h"        // For attack_strength_punctuation()
 #include "beam.h"          // For Lajatang of Order's silver damage
+#include "bloodspatter.h"  // For Ass Plow
 #include "cloud.h"         // For storm bow's and robe of clouds' rain
 #include "coordit.h"       // For distance_iterator()
 #include "english.h"       // For apostrophise
@@ -1601,4 +1602,25 @@ static void _EMBRACE_world_reacts(item_def *item)
 
     if (item->plus != last_plus)
         you.redraw_armour_class = true;
+}
+
+////////////////////////////////////////////////////
+//giant spiked club "Ass Plow"
+//blood effect
+static void _ASS_PLOW_melee_effects(item_def* /*weapon*/, actor* attacker,
+                                   actor* defender, bool mondied, int dam)
+{
+    if (dam)
+    {
+		//if monster died
+		if (mondied)
+		{
+			//explode blood everywhere even if they don't bleed, lol
+			blood_spray(defender->pos(), defender->as_monster()->type,
+						dam / 2);
+			defender->as_monster()->flags |= MF_EXPLODE_KILL;
+			mprf("You plowed %s ass.",
+				defender->name(DESC_ITS).c_str());
+		}
+    }
 }

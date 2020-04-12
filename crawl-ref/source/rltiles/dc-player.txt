@@ -169,6 +169,8 @@ cat8
 cat9
 cat10
 %sdir player/base
+swamp_ogre_m SWAMP_OGRE
+harpy_f HARPY
 %end_ctg
 
 ###SHADOW
