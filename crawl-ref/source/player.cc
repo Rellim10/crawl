@@ -3434,7 +3434,8 @@ bool player::stasis() const
 bool player::cloud_immune(bool calc_unid, bool items) const
 {
     return have_passive(passive_t::cloud_immunity)
-        || actor::cloud_immune(calc_unid, items);
+        || actor::cloud_immune(calc_unid, items)
+		|| (you.get_mutation_level(MUT_FEATHERS) >= 3); //harpy cloud immunity
 }
 
 unsigned int exp_needed(int lev, int exp_apt)
@@ -4840,7 +4841,8 @@ void float_player()
     else
         mpr("You fly up into the air.");
 
-    if (you.species == SP_TENGU)
+	//update for harpies
+    if (you.species == SP_TENGU || you.species == SP_HARPY)
         you.redraw_evasion = true;
 }
 
@@ -4891,7 +4893,8 @@ bool land_player(bool quiet)
 
     if (!quiet)
         mpr("You float gracefully downwards.");
-    if (you.species == SP_TENGU)
+	//updated for harpies
+    if (you.species == SP_TENGU || you.species == SP_HARPY)
         you.redraw_evasion = true;
 
     you.attribute[ATTR_FLIGHT_UNCANCELLABLE] = 0;
@@ -5911,6 +5914,7 @@ vector<mutation_ac_changes> all_mutation_ac_changes = {
     ,mutation_ac_changes(MUT_SHAGGY_FUR,             mutation_activity_type::PARTIAL, ONE_TWO_THREE)
     ,mutation_ac_changes(MUT_PHYSICAL_VULNERABILITY, mutation_activity_type::PARTIAL, {-5,-10,-15})
     ,mutation_ac_changes(MUT_ONION_SKIN,             mutation_activity_type::PARTIAL, ONE_TWO_THREE)
+	,mutation_ac_changes(MUT_FEATHERS,               mutation_activity_type::PARTIAL, ONE_TWO_THREE)
 	// Scale mutations are more easily disabled (forms etc.). This appears to be for flavour reasons.
     // Preserved behaviour from before mutation ac was turned to data.
     ,mutation_ac_changes(MUT_IRIDESCENT_SCALES,      mutation_activity_type::FULL,    {2, 4, 6})
@@ -6575,8 +6579,8 @@ bool player::racial_permanent_flight() const
 
 bool player::tengu_flight() const
 {
-    // Only Tengu get perks for flying.
-    return species == SP_TENGU && airborne();
+    // Only Tengu and Harpies get perks for flying.
+    return (species == SP_TENGU || species == SP_HARPY) && airborne();
 }
 
 /**

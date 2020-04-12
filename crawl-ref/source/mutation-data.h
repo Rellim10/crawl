@@ -1942,6 +1942,22 @@ static const mutation_def mut_data[] =
 //  {"Your bad gas subsides.", "", ""},
 //},
 
+//harpy feathers
+{ MUT_FEATHERS, 1, 3, mutflag::good, true,
+  "feathered",
+
+  {"Your body is covered in feathers. (AC +1)",
+   "Your body is heavily covered in feathers. (AC +2)",
+   "Your feathers insulate you from the weather. (AC +3, rCloud)"},
+
+  {"Feathers sprout all over your body.",
+   "Your feathers grow in thicker.",
+   "Your feathers grow in thicker and insulate you."},
+
+  {"All of your feathers fall out.",
+   "Some of your feathers fall out.",
+   "Some of your feathers fall out."},
+},
 //////////////////////////////////////////////////
 //////////////////////////////////////////////////
 

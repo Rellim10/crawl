@@ -222,6 +222,7 @@ enum mutation_type
 	//new mutations//
 	MUT_ONION_SKIN, //swamp ogre mutation
 	//MUT_SWAMP_FARTS, //swamp ogre mutation
+	MUT_FEATHERS, //harpy feather mutation
 	/////////////////
 	
     NUM_MUTATIONS,

@@ -1,0 +1,74 @@
+enum: SP_HARPY
+monster: MONS_HARPY
+name: Harpy
+short_name: Hy
+adjective: Avian
+difficulty: Advanced
+difficulty_priority: 50
+species_flags:
+  - hairless
+aptitudes:
+  xp: -1
+  hp: -3
+  mp_mod: 1
+  mr: 2
+  fighting: 1
+  short_blades: false
+  long_blades: -2
+  axes: -4
+  maces_and_flails: -2
+  polearms: -1
+  staves: -1
+  bows: -3
+  crossbows: false
+  throwing: -2
+  armour: false
+  dodging: 4
+  stealth: 2
+  shields: -3
+  unarmed_combat: 2
+  spellcasting: -1
+  conjurations: 2
+  hexes: -3
+  summoning: -2
+  fire_magic: -1
+  ice_magic: -1
+  air_magic: 3
+  earth_magic: -3
+  poison_magic: -1
+  invocations: -1
+  evocations: -1
+str: 7
+int: 7
+dex: 10
+levelup_stat_frequency: 5
+levelup_stats:
+  - dex
+mutations:
+  1:
+    MUT_CLAWS: 2
+    MUT_TALONS: 3
+    MUT_FEATHERS: 1
+    MUT_TENGU_FLIGHT: 1
+    MUT_CARNIVOROUS: 1
+    MUT_FAST: 1
+  6:
+    MUT_FEATHERS: 1
+  13:
+    MUT_FEATHERS: 1
+fake_mutations:
+  - long: You cannot wear body armour, gloves, or boots.
+    short: no body armour
+recommended_jobs:
+  - JOB_BERSERKER
+  - JOB_CONJURER
+  - JOB_AIR_ELEMENTALIST
+  - JOB_FIRE_ELEMENTALIST
+  - JOB_ICE_ELEMENTALIST
+  - JOB_TRANSMUTER
+recommended_weapons:
+  - SK_UNARMED_COMBAT
+  - SK_STAVES
+  - SK_POLEARMS
+walking_verb: Glid
+altar_action: roost on

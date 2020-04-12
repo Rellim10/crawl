@@ -854,17 +854,31 @@ bool can_wear_armour(const item_def &item, bool verbose, bool ignore_temporary)
             mpr("You can't wear that!");
         return false;
     }
-
-    if (species_is_draconian(you.species) && slot == EQ_BODY_ARMOUR)
+	
+	//body armour restriction
+    if (slot == EQ_BODY_ARMOUR)
     {
-        if (verbose)
-        {
-            mprf("Your wings%s won't fit in that.", you.has_mutation(MUT_BIG_WINGS)
-                 ? "" : ", even vestigial as they are,");
-        }
-        return false;
+		//draconians
+		if (species_is_draconian(you.species)){
+			if (verbose)
+			{
+				mprf("Your wings%s won't fit in that.", you.has_mutation(MUT_BIG_WINGS)
+					? "" : ", even vestigial as they are,");
+			}
+			return false;
+		}
+		
+		//prevent harpies from using armour
+		if (you.species == SP_HARPY){
+			if (verbose)
+			{
+				mpr("Your wings won't fit in that.");
+			}
+			return false;
+		}
+		
     }
-
+		
     if (sub_type == ARM_NAGA_BARDING || sub_type == ARM_CENTAUR_BARDING)
     {
         if (you.species == SP_NAGA && sub_type == ARM_NAGA_BARDING
@@ -1024,6 +1038,18 @@ bool can_wear_armour(const item_def &item, bool verbose, bool ignore_temporary)
             }
             return false;
         }
+		
+		//prevent harpies from using gloves
+		//they got them big ol' arm-wingies, dawg
+		if (you.species == SP_HARPY){
+            if (verbose)
+            {
+                mprf("Your winged arm%s won't fit into a glove!",
+                     you.get_mutation_level(MUT_MISSING_HAND) ? "" : "s");
+            }
+            return false;
+		}
+		
     }
 
     if (sub_type == ARM_BOOTS)
