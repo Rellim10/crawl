@@ -27,6 +27,14 @@ Renamed to Minitaur because now they're spriggan sized. Turns out minotaurs are 
 
 They're like vanilla crawl ogres except a little more exciting. They get rPois, rCorr, and the ability to fart out poison clouds. If all of that sounds like I just made naga v2.0 then you're probably right, but I did it for shrek.
 
+### Anime Monster-Girl Collection(???)
+
+As if this fork wasn't stupid enough.
+
+**Harpy**
+
+They're frail, fast, and can fly. They can't use most armour. They're sort of like playing a tengu that's secretly a felid in a bird costume. If that sounds like a good idea for a playable species to you, then feel free to give it a try.
+
 ### New Enemies
 
 **Swamp Ogre** _(Incomplete)_
